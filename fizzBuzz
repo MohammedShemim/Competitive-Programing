@@ -1,0 +1,31 @@
+/**
+ * @param {number} n
+ * @return {string[]}
+ */
+var fizzBuzz = function(n) {
+    let answer = []
+   
+    
+     for(let i = 1; i<=n;i++){
+         if (i%3=== 0 && i%5 === 0) {
+             answer[i] ="FizzBuzz";
+            continue; 
+            }
+         
+         
+        else if (i%3 === 0 && i%5 != 0) {
+            answer[i]="Fizz";
+            continue;
+             }
+        else if (i%3 !=0 && i%5 === 0) {
+            answer[i] = "Buzz";
+            continue;     
+        }
+        else {
+            answer[i] = `${i}`;
+            continue;
+        }
+     }
+     answer.shift();
+     return answer;
+    };
